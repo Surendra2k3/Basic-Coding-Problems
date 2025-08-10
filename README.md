@@ -1,0 +1,1 @@
+A collection of beginner-friendly Java programs covering fundamental coding problems and concepts. This repository includes solutions for basic programming challenges such as loops, conditionals, arrays, strings, number theory, and pattern printing. Perfect for students, beginners, and anyone preparing for coding interviews or brushing up on Java basics.
