@@ -1,4 +1,4 @@
-//Using Recursion
+//FIBONNACI SERIES USING RECURSION
 
 public class Main{
     public static void main(String[] args){
@@ -17,7 +17,7 @@ public class Main{
 }
 ===========================================================
 
-//Normal Code
+//FIBONNACI SERIES
 
 public class Main{
     public static void main(String[] args){
