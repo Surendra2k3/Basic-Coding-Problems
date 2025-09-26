@@ -1,4 +1,4 @@
-// A palindrome number is a number that remains the same when its digits are reversed.
+// A palindrome string is a sequence of characters that remains exactly the same when read in reverse order
 
 import java.util.Scanner;
 
