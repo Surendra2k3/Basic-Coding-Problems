@@ -1,23 +1,32 @@
 // A palindrome number is a number that remains the same when its digits are reversed.
 
-public class PalindromeNumber {
+import java.util.Scanner;
+
+public class PalindromeNumberScanner {
     public static void main(String[] args) {
-        int num = 121;  // number to check
+        Scanner sc = new Scanner(System.in);
+
+        // taking input from user
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
         int originalNum = num;
         int reversedNum = 0;
 
         // reverse the number
         while (num != 0) {
-            int digit = num % 10;         // get last digit
+            int digit = num % 10;                   // get last digit
             reversedNum = reversedNum * 10 + digit; // build reversed number
-            num = num / 10;              // remove last digit
+            num = num / 10;                        // remove last digit
         }
 
-        // check if palindrome
+        // check palindrome condition
         if (originalNum == reversedNum) {
             System.out.println(originalNum + " is a Palindrome number.");
         } else {
             System.out.println(originalNum + " is NOT a Palindrome number.");
         }
+
+        sc.close(); // close scanner
     }
 }
