@@ -9,7 +9,7 @@ public class Main {
       String str = sc.nextLine();
 
       // Normalize the string: lowercase + remove spaces
-      str = str.toLowerCase().replaceAll("\\s+", "");
+      str = str.toLowerCase().replaceAll("[^a-z0-9]", "");
 
       int start = 0;
       int end = str.length() - 1;
