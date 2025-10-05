@@ -1,0 +1,73 @@
+// Rotating an array to right by k positions
+import java.util.Scanner;
+public class Main{
+
+    public static void reverse(int[] arr,int start,int end){
+        while(start<end){
+            int temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            start++;
+            end--;
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size=sc.nextInt();
+        int[] nums=new int[size];
+        System.out.print("Enter the array elements: ");
+        for(int i=0;i<nums.length;i++){
+            nums[i]=sc.nextInt();
+        }
+        System.out.print("Enter the number of positions to rotate (k): ");
+        int k=sc.nextInt();
+        k=k%size;
+        reverse(nums,0,size-1);
+        reverse(nums,0,k-1);
+        reverse(nums,k,size-1);
+        System.out.print("Array after rotating right by "+k+" positions is ");
+        for(int num:nums){
+            System.out.print(num+" ");
+        }
+        sc.close();
+    }
+}
+
+======================================================================================================
+// Rotating an array to left by k positions
+import java.util.Scanner;
+
+public class Main{
+
+    public static void reverse(int[] arr,int start,int end){
+        while(start<end){
+            int temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            start++;
+            end--;
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size=sc.nextInt();
+        int[] nums=new int[size];
+        System.out.print("Enter the array elements: ");
+        for(int i=0;i<nums.length;i++){
+            nums[i]=sc.nextInt();
+        }
+        System.out.print("Enter the number of positions to rotate (k): ");
+        int k=sc.nextInt();
+        k=k%size;
+        reverse(nums,0,k-1);
+        reverse(nums,k,size-1);
+        reverse(nums,0,size-1);
+        System.out.print("Array after rotating left by "+k+" positions is ");
+        for(int num:nums){
+            System.out.print(num+" ");
+        }
+        sc.close();
+    }
+}
