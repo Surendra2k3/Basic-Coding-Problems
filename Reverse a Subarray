@@ -1,0 +1,39 @@
+// Reverse a subarray between indices i and j.
+import java.util.Scanner;
+public class Main{
+
+    public static void reverse(int[] arr,int start,int end){
+        while(start<end){
+            int temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            start++;
+            end--;
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size=sc.nextInt();
+        int[] nums=new int[size];
+        System.out.print("Enter the array elements: ");
+        for(int i=0;i<nums.length;i++){
+            nums[i]=sc.nextInt();
+        }
+        System.out.print("Enter the starting index (i): ");
+        int i=sc.nextInt();
+        System.out.print("Enter the ending index (j): ");
+        int j=sc.nextInt();
+        if(i<0 || j>=size ||i>j){
+            System.out.println("Invalid indices! Please enter valid range.");
+        }else{
+            reverse(nums, i, j);
+        }
+        
+        System.out.print("Array after reversing the subarray from inde "+i+" to "+j+" is ");
+        for(int num:nums){
+            System.out.print(num+" ");
+        }
+        sc.close();
+    }
+}
