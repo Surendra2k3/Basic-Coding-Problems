@@ -1,0 +1,28 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
+        int size=sc.nextInt();
+        int[] nums=new int[size];
+        System.out.print("Enter the array elements: ");
+        for(int i=0;i<nums.length;i++){
+            nums[i]=sc.nextInt();
+        }
+        System.out.print("Enter the value of k: ");
+        int k=sc.nextInt();
+        Arrays.sort(nums);
+        System.out.print("After sorting: ");
+        for(int num: nums){
+            System.out.print(num+" ");
+        }
+        System.out.println();
+        int kthsmallest=nums[k-1];
+        int kthlargest=nums[size-k];
+        System.out.println("The kth smallest element is "+kthsmallest);
+        System.out.println("The kth largest element is "+kthlargest);
+        sc.close();
+    }
+}
