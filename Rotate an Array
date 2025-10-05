@@ -1,4 +1,4 @@
-// Rotating an array to right by k positions
+// Rotating an array to right by k positions.
 import java.util.Scanner;
 public class Main{
 
