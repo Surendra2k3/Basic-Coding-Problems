@@ -30,7 +30,7 @@ public class Main{
             reverse(nums, i, j);
         }
         
-        System.out.print("Array after reversing the subarray from inde "+i+" to "+j+" is ");
+        System.out.print("Array after reversing the subarray from indices "+i+" to "+j+" is ");
         for(int num:nums){
             System.out.print(num+" ");
         }
